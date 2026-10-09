@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <title>المقام المحمود</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="brand">
+            <div class="brand-icon">
+    <img src="images/logo.png" alt="المقام المحمود">
+            </div>
+            <div>
+                <h1>المقام المحمود</h1>
+                <p>AL-MAQAM AL-MAHMOUD</p>
+            </div>
+        </div>
+
+        <button class="icon-button" id="themeButton"
+                aria-label="تغيير المظهر">☼</button>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <div class="welcome-pattern"> ۩ </div>
+            <p class="eyebrow">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+
+            <h2>وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا</h2>
+
+            <p class="welcome-description">
+                اجعل للقرآن نصيبًا من يومك
+            </p>
+
+            <button class="primary-button" data-page="quran">
+                <span>☾</span>
+                ابدأ القراءة
+                <span>←</span>
+            </button>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <h2>ماذا تريد أن تفعل؟</h2>
+                <span class="gold-line"></span>
+            </div>
+
+            <div class="features-grid">
+                <button class="feature-card" data-page="quran">
+                    <span class="feature-icon">📖</span>
+                    <span class="feature-title">القرآن الكريم</span>
+                    <span class="feature-description">السور والآيات</span>
+                </button>
+
+                <button class="feature-card" data-page="adhkar">
+                    <span class="feature-icon">✿</span>
+                    <span class="feature-title">الأذكار</span>
+                    <span class="feature-description">أذكار المسلم</span>
+                </button>
+
+                <button class="feature-card" data-page="tasbih">
+                    <span class="feature-icon">📿</span>
+                    <span class="feature-title">المسبحة</span>
+                    <span class="feature-description">عداد التسبيح</span>
+                </button>
+
+                <button class="feature-card" data-page="favorites">
+                    <span class="feature-icon">♡</span>
+                    <span class="feature-title">المفضلة</span>
+                    <span class="feature-description">ما حفظته</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="daily-card">
+            <span class="daily-icon">❝</span>
+            <h2>آية اليوم</h2>
+            <p class="daily-verse">
+                فَاذْكُرُونِي أَذْكُرْكُمْ
+            </p>
+            <p class="daily-source">سورة البقرة — الآية 152</p>
+        </section>
+
+        <section id="contentPage" class="content-page" hidden>
+            <button id="backButton" class="back-button">
+                → الرجوع للرئيسية
+            </button>
+            <div id="pageContent"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-symbol">۞</div>
+        <p>المقام المحمود</p>
+        <span>رفيقك في رحلتك مع القرآن الكريم</span>
+    </footer>
+
+    <nav class="bottom-nav">
+        <button class="nav-item active" data-page="home">
+            <span>⌂</span>
+            <small>الرئيسية</small>
+        </button>
+
+        <button class="nav-item" data-page="quran">
+            <span>۞</span>
+            <small>القرآن</small>
+        </button>
+
+        <button class="nav-item" data-page="adhkar">
+            <span>◉</span>
+            <small>الأذكار</small>
+        </button>
+
+        <button class="nav-item" data-page="favorites">
+            <span>♡</span>
+            <small>المفضلة</small>
+        </button>
+    </nav>
+
+</body>
+</html>

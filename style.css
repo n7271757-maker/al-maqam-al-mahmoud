@@ -1,0 +1,561 @@
+
+:root {
+    --bg: #090909;
+    --surface: #141414;
+    --surface-light: #1c1a14;
+    --gold: #d4af37;
+    --gold-light: #f1d77a;
+    --text: #f5f0df;
+    --muted: #a6a092;
+    --border: rgba(212, 175, 55, 0.22);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    padding-bottom: 95px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Tahoma, Arial, sans-serif;
+    line-height: 1.8;
+    transition: background 0.25s, color 0.25s;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(9, 9, 9, 0.96);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--gold);
+    border-radius: 14px;
+    color: var(--gold);
+    font-size: 30px;
+}
+
+.brand h1 {
+    color: var(--gold-light);
+    font-size: 19px;
+}
+
+.brand p {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.icon-button {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--gold);
+    font-size: 23px;
+}
+
+main {
+    width: min(100% - 32px, 720px);
+    margin: 0 auto;
+}
+
+.welcome {
+    position: relative;
+    overflow: hidden;
+    margin-top: 24px;
+    padding: 36px 18px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background:
+        radial-gradient(ellipse at top, #332a13 0%, transparent 65%),
+        linear-gradient(145deg, #19160e, #0d0d0d 70%);
+    text-align: center;
+}
+
+.welcome-pattern {
+    color: rgba(212, 175, 55, 0.18);
+    font-size: 70px;
+    line-height: 1.2;
+}
+
+.eyebrow {
+    margin-top: 8px;
+    color: var(--gold-light);
+    font-size: 14px;
+}
+
+.welcome h2 {
+    margin-top: 18px;
+    color: var(--gold-light);
+    font-size: clamp(21px, 5vw, 29px);
+}
+
+.welcome-description {
+    margin: 8px 0 24px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    min-height: 48px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f1d77a, #b58a20);
+    color: #171208;
+    font-weight: bold;
+}
+
+.section {
+    margin-top: 32px;
+}
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 19px;
+}
+
+.gold-line {
+    display: block;
+    width: 55px;
+    height: 3px;
+    margin-top: 7px;
+    border-radius: 4px;
+    background: var(--gold);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.feature-card {
+    display: flex;
+    min-height: 155px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--surface);
+    color: var(--text);
+    text-align: right;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.feature-card:active {
+    transform: scale(0.97);
+}
+
+.feature-card:hover {
+    border-color: var(--gold);
+}
+
+.feature-icon {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    color: var(--gold);
+    font-size: 26px;
+}
+
+.feature-title {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.feature-description {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.daily-card {
+    margin-top: 24px;
+    padding: 22px 16px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface-light);
+    text-align: center;
+}
+
+.daily-icon {
+    color: var(--gold);
+    font-size: 32px;
+}
+
+.daily-card h2 {
+    color: var(--gold-light);
+    font-size: 17px;
+}
+
+.daily-verse {
+    margin-top: 12px;
+    font-size: 23px;
+    line-height: 2;
+}
+
+.daily-source {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.content-page {
+    min-height: 55vh;
+    padding: 22px 0;
+}
+
+.back-button {
+    margin-bottom: 22px;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--gold-light);
+}
+
+.page-title {
+    margin-bottom: 18px;
+    color: var(--gold-light);
+    font-size: 23px;
+}
+
+.page-description {
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.message-card {
+    margin-bottom: 12px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: var(--surface);
+}
+
+.message-card h3 {
+    margin-bottom: 8px;
+    color: var(--gold);
+    font-size: 16px;
+}
+
+.message-card p {
+    color: var(--text);
+    overflow-wrap: anywhere;
+}
+
+.tasbih-count {
+    margin: 25px 0;
+    color: var(--gold-light);
+    font-size: 54px;
+    text-align: center;
+}
+
+.tasbih-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tasbih-controls button {
+    min-width: 100px;
+    padding: 12px 18px;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    background: var(--surface-light);
+    color: var(--gold-light);
+}
+
+.empty-message {
+    padding: 20px;
+    color: var(--muted);
+    text-align: center;
+}
+
+footer {
+    padding: 35px 16px 20px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.footer-symbol {
+    color: var(--gold);
+    font-size: 30px;
+}
+
+footer p {
+    color: var(--gold-light);
+    font-weight: bold;
+}
+
+footer span {
+    font-size: 12px;
+}
+
+.bottom-nav {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 8px calc(10px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--border);
+    background: #101010;
+}
+
+.nav-item {
+    display: flex;
+    min-width: 58px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+}
+
+.nav-item span {
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+.nav-item small {
+    font-size: 10px;
+}
+
+.nav-item.active {
+    color: var(--gold-light);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body.light-theme {
+    --bg: #f7f3e7;
+    --surface: #ffffff;
+    --surface-light: #eee6ce;
+    --text: #211d13;
+    --muted: #6f6858;
+    --border: rgba(133, 100, 20, 0.3);
+}
+
+body.light-theme .top-bar,
+body.light-theme .bottom-nav {
+    background: #fffdf7;
+}
+
+body.light-theme .welcome {
+    background: linear-gradient(145deg, #f0e2b6, #fffdf7);
+}
+
+@media (min-width: 600px) {
+    .features-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .feature-card {
+        min-height: 175px;
+    }
+
+    .welcome {
+        padding: 48px 25px;
+    }
+}
+
+/* قائمة سور القرآن الكريم */
+
+.search-box {
+    width: 100%;
+    margin: 8px 0 20px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    outline: none;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+}
+
+.search-box:focus {
+    border-color: var(--gold);
+}
+
+.surahs-list {
+    display: grid;
+    gap: 10px;
+}
+
+.surah-card {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 13px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    color: var(--text);
+    text-align: right;
+}
+
+.surah-number {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--gold-light);
+}
+
+.surah-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.surah-info h3 {
+    color: var(--gold-light);
+    font-size: 16px;
+}
+
+.surah-info p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.surah-name {
+    color: var(--gold);
+    font-size: 21px;
+}
+
+.quran-status {
+    padding: 20px 10px;
+    color: var(--muted);
+    text-align: center;
+}
+
+.ayah-text {
+    padding: 18px 8px;
+    border-bottom: 1px solid var(--border);
+    font-size: 23px;
+    line-height: 2.2;
+    text-align: justify;
+}
+
+.ayah-number {
+    display: inline-grid;
+    place-items: center;
+    min-width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    color: var(--gold-light);
+    font-size: 13px;
+}
+
+.quran-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.quran-actions button {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface-light);
+    color: var(--gold-light);
+}
+
+/* مشغل التلاوة وحفظ القراءة */
+
+.ayah-audio {
+    display: block;
+    width: 100%;
+    height: 42px;
+    margin-top: 12px;
+}
+
+.ayah-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.ayah-actions button {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface-light);
+    color: var(--gold-light);
+    font-size: 12px;
+}
+
+.continue-button {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid var(--gold);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--gold-light);
+}
+.brand-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
